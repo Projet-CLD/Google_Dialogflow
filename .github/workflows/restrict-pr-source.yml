@@ -1,0 +1,18 @@
+name: Restrict PR Source
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  restrict-pr-source:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail if PR is not from 'development' branch
+        run: |
+          echo "Source branch: ${{ github.head_ref }}"
+          if [ "${{ github.head_ref }}" != "development" ]; then
+            echo "Error: only PRs from 'development' can be merged into 'main'."
+            exit 1
+          fi
