@@ -1,63 +1,83 @@
-# Google Dialogflow (GDF) cheat sheet
-Course: HEIG-VD CLD 2024/25  
-Authors: Alex Berberat, Aude Laydu, Maxime Lestiboudois, Nathan Parisod  
-Date:  09.06.2025
+# Google DialogFlow Cheat Sheet
 
-## Why Google Dialogflow ?
-GDF would be particularly useful for a Swiss SME that wants to automate customer service interactions, such as answering frequently asked questions, making apointments, registering orders,...  
-It allows the companies to have a 24/7 support in multiple language and reduce the cost of hiring real people.  
+**Course:** HEIG-VD CLD 2024/25  
+**Authors:** Alex Berberat, Aude Laydu, Maxime Lestiboudois, Nathan Parisod  
+**Date:** 09.06.2025
 
-GDF acts as an middleman between the customers and the companies.  
-It reveives natural language input such as text or voice, processes the intent and retruns the answer in the form of text or voice or it can also trigger an action.  
+---
 
+## Why Google DialogFlow?
 
-## Benefits and limitations
-### Benegits
-- Easy to set up.
-- Easy to intgrate.
-- Can understand multiple languages.
+Google DialogFlow is particularly useful for a Swiss SME that wants to automate customer service interactions, such as answering frequently asked questions, making appointments, or registering orders.  
+It allows companies to offer 24/7 multilingual support and reduce the cost of hiring human staff.  
+
+Google DialogFlow acts as a middleman between customers and companies.  
+It receives natural language input (text or voice), processes the intent, and returns a response (text or voice), or can trigger an action.
+
+---
+
+## Benefits and Limitations
+
+### Benefits
+
+- Easy to set up.  
+- Easy to integrate.  
+- Supports multiple languages.  
 
 ### Limitations
-- Vendor lock-in.
-- Less control than open-source alternatives.
-- Data privacy.
 
+- Vendor lock-in.  
+- Less control compared to open-source alternatives.  
+- Concerns about data privacy.  
 
-## Cost structure
-### Measured components are : 
-- Nbr of requests (text or voice)
-- The version of GDF chosen. (ES or CX)
-- Storage.
-- Additional charges for non google integrations.  
+---
 
-For a small Swiss SME with ~4000 requests per month we would have.
-- First 1000 requests for free.
-- Remaining 3000 costs: ~0.002/requests = $6/month
-- Optional Google Cloud services: ~$0-10/month
+## Cost Structure
 
+### Costs depend on
 
-## How to get started
+- Number of requests (text or voice)  
+- Version of Google DialogFlow (ES or CX)  
+- Storage  
+- Additional charges for non-Google integrations  
+
+For a small Swiss SME with `~60'000 requests/month`:
+
+- First `1000/day` requests: `free`  
+- Remaining `59'000` requests: `~$0.002/request` = `(60'000 - (30 * 1000)) * 0,002` =~ `$60/month`
+- Optional but useful Google Cloud services such as hosting fees: `~$0–10/month`
+- Estimated total: `~$60-70/month`
+
+---
+
+## How to Get Started
+
 ### Prerequisites
-- Google Cloud Platform account.
-- Basic knowledge of APIs and intent-based chatbot.
 
-### Steps to prepare
-1. Create a Google Cloud project.
-2. Enable Dialogflow API.
-3. Create a Dialogflow agent.
-4. Define intents and entities.
-5. Set up integrations (web, messaging). 
+- Google Cloud Platform (GCP) account
+- Basic knowledge of APIs and intent-based ChatBots  
 
-### Hello-world example
-1. Create an intent with training phrases like "Hi", "Hello".
-2. Set a response to smth like "Hello! How can I help you?".
-3. Test in GDF simulator.
+### Setup Steps
 
+1. Create a Google Cloud project  
+2. Enable the DialogFlow API  
+3. Create a DialogFlow agent  
+4. Define intents and entities  
+5. Set up integrations (web, messaging, etc.)  
 
-## Common commands/operations/configurations/usage patterns
-- Creating intents and entities to handle user inputs.
-- Set-up fulfillment to connect to backend logic.
-- Intergating with external platforms (website, Messaging app, ...)
-- Using contexts to handle long converstations.
-- Give training phrases of what users might say.
-- Create different variants for a response to make the conversation feel more natural.
+### Hello World Example
+
+1. Create an intent with training phrases like "Hi", "Hello"  
+2. Set a response like "Hello! How can I help you?"  
+3. Test it in the Google DialogFlow simulator  
+
+---
+
+## Common Commands / Operations / Usage Patterns
+
+- Create intents and entities to handle user inputs  
+- Set up fulfillment to connect to backend logic  
+- Integrate with external platforms (website, messaging apps, etc.)  
+- Use contexts to handle long conversations  
+- Provide training phrases based on user input variations  
+- Create multiple response variants for more natural conversations  
